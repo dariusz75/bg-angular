@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us" ng-app="myApp">
 <head>
-  <title>12 $scope @ </title>
+<title>12 $scope @ </title>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
@@ -13,40 +13,63 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
-    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
-  <link href='styles/main.css' rel='stylesheet' type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-  <script src="https://code.angularjs.org/1.5.8/angular-route.js"></script>
-  <script src="scripts/app.js" type="text/javascript"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300, 400,400i,500,700|Special+Elite" rel="stylesheet">
+
+<link href='styles/main.css' rel='stylesheet' type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+<script src="https://code.angularjs.org/1.5.8/angular-route.js"></script>
+<script src="scripts/app.js" type="text/javascript"></script>
+<script src="controllers/mainController.js"></script>
 </head>
 <body>
- <div class="bs-example">
-    <nav role="navigation" class="navbar navbar-default">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <!-- Collection of nav links and other content for toggling -->
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="#/">Main</a></li>
-              <li><a href="#/first">Template 1</a></li>
-              <li><a href="#/second">Template 2</a></li>
-              <li><a href="#/third">Template 3</a></li>
-            </ul>
-            
-        </div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  <div class="container">
+   
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+          <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+      </div>
+      <!-- Collection of nav links and other content for toggling -->
+      <div id="navbarCollapse" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#/">NEWS</a></li>
+            <li><a href="#/biography">BIOGRAPHY</a></li>
+            <li><a href="#/tour">TOUR</a></li>
+            <li><a href="http://www.boozeandglory.bigcartel.com/" target="_blank">SHOP</a></li>
+            <li><a href="#/discography">DISCOGRAPHY</a></li>
+            <li><a href="#/media">MEDIA</a></li>
+            <li><a href="#/press">PRESS</a></li>
+            <li><a href="#/fans">FANS</a></li>
+            <li><a href="#/contact">CONTACT</a></li>
+          </ul>   
+      </div>
     </nav>
-</div>
-<div class="container">
-  <div ng-view></div>
-</div>
+   
+    <div class="row">
+      <div class="main-image">
+        <img class="img-responsive" src="img/top-picture.jpg">
+      </div>    
+    </div>
+
+    <div ng-view> </div>
+
+  </div>
 </body>
 </html>
 

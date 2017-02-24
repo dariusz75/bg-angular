@@ -1,6 +1,34 @@
+/* 
+font-family: 'Special Elite', cursive; 
+font-family: 'Roboto', sans-serif;
+*/
+
+
 body {
-  color: #2d3339;
-  font-family: "Varela Round";
+  color: red;
   text-align: center;
-  background: #edeff0;
-  font-size: 16px; }
+  background: #000;
+  font-size: 16px; 
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-image {
+	max-width: 100%;
+}
+
+.news-row {
+	padding-bottom: 25px;
+	margin-bottom: 30px;
+	border-bottom: solid white 1px;
+}
+
+.news-title {
+	color: #c39b2c;
+	font-family: 'Special Elite', cursive; 
+}
+
+ .news-text {
+ 	color: #fff;
+ 	font-family: 'Roboto', sans-serif;
+ 	font-weight: 300;
+ }

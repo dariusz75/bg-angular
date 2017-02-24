@@ -11,39 +11,81 @@ myApp.config(function ($routeProvider) {
 	$routeProvider
 
 	.when('/', {
-		templateUrl: 'pages/main.html',
-		controller: 'mainController'
+		templateUrl: 'pages/news.html',
+		controller: 'newsController'
 	})
-	.when('/first', {
-		templateUrl: 'pages/template1.html',
-		controller: 'firstController'
+	.when('/biography', {
+		templateUrl: 'pages/biography.html',
+		controller: 'biographyController'
 	})
-	.when('/second', {
-		templateUrl: 'pages/template2.html',
-		controller: 'secondController'
+	.when('/tour', {
+		templateUrl: 'pages/tour.html',
+		controller: 'tourController'
 	})
-	.when('/third', {
-		templateUrl: 'pages/template3.html',
-		controller: 'thirdController'
+	.when('/shop', {
+		templateUrl: 'pages/shop.html',
+	})
+	.when('/discography', {
+		templateUrl: 'pages/discography.html',
+		controller: 'discographyController'
+	})
+	.when('/media', {
+		templateUrl: 'pages/media.html',
+		controller: 'mediaController'
+	})
+	.when('/press', {
+		templateUrl: 'pages/press.html',
+		controller: 'pressController'
+	})
+	.when('/fans', {
+		templateUrl: 'pages/fans.html',
+		controller: 'fansController'
+	})
+	.when('/contact', {
+		templateUrl: 'pages/contact.html',
+		controller: 'contactController'
 	})
 });
 
-myApp.controller('mainController', ['$scope', function($scope) {	
-	$scope.message = "This message comes from the Main Controller.";
-	$scope.basicMessage = "This is a basic message and it comes from the mainController."
+myApp.controller('newsController', ['$scope', function($scope) {	
+	$scope.message = "This message comes from the newsController.";
+	$scope.basicMessage = "This is a basic message and it comes from the newsController.";
+	$scope.videos = {
+		videoLeft: 'https://www.youtube.com/embed/xpawuHBoc0E',
+		videoMiddle: 'ooooo',
+		videoRight: '',
+	}
 }]);
 
-myApp.controller('firstController', ['$scope', function($scope) {
-	$scope.message = "This message comes from the First Controller.";
+myApp.controller('biographyController', ['$scope', function($scope) {
+	$scope.message = "This message comes from the Biography Controller.";
 }]);
 
-myApp.controller('secondController', ['$scope', function($scope) {
-	$scope.message = "This message comes from the Second Controller.";
+myApp.controller('tourController', ['$scope', function($scope) {
+	$scope.message = "This message comes from the Tour Controller.";
 }]);
 
-myApp.controller('thirdController', ['$scope', function($scope) {
-	$scope.message = "This message comes from the Third Controller.";
+myApp.controller('discographyController', ['$scope', function($scope) {
+	$scope.message = "This message comes from the Discography Controller.";
 }]);
+
+myApp.controller('mediaController', ['$scope', function($scope) {
+	$scope.message = "Message from Media controller";
+}]);
+
+myApp.controller('pressController', ['$scope', function($scope) {
+	$scope.message = "Message from Press controller";
+}]);
+
+myApp.controller('fansController', ['$scope', function($scope) {
+	$scope.message = "Message from Fans controller";
+}]);
+
+myApp.controller('contactController', ['$scope', function($scope) {
+	$scope.message = "Message from Contact controller";
+}]);
+
+
 
 
 /* Tworzenie Dyrektywu */
