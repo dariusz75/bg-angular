@@ -5,8 +5,7 @@ font-family: 'Roboto', sans-serif;
 
 
 body {
-  color: red;
-  text-align: center;
+  color: #fff;
   background: #000;
   font-size: 16px; 
   font-family: 'Roboto', sans-serif;
@@ -30,5 +29,35 @@ body {
  .news-text {
  	color: #fff;
  	font-family: 'Roboto', sans-serif;
+ 	font-weight: 300;
+ }
+
+ .videos-row {
+ 	margin-bottom: 30px;
+ 	padding-bottom: 10px; 
+ }
+
+.videos-row iframe {
+	border: solid 1px #c39b2c;
+}
+
+ .logo-bottom {
+ 	max-width: 50%;
+ }
+
+ .follow-us ul  {
+ 	list-style-type: none;
+ 	padding-left: 0;
+ }
+
+ .follow-us ul li {
+ 	display: inline-block;
+ 	max-width: 15%;
+ 	border-right: solid 1px #000: 
+ 	padding-right: 10px;
+ }
+
+ .biography-text {
+ 	padding: 20px 20%;
  	font-weight: 300;
  }

@@ -47,22 +47,19 @@ myApp.config(function ($routeProvider) {
 	})
 });
 
-myApp.controller('newsController', ['$scope', function($scope) {	
-	$scope.message = "This message comes from the newsController.";
-	$scope.basicMessage = "This is a basic message and it comes from the newsController.";
-	$scope.videos = {
-		videoLeft: 'https://www.youtube.com/embed/xpawuHBoc0E',
-		videoMiddle: 'ooooo',
-		videoRight: '',
-	}
+myApp.controller('newsController', ['$scope', '$sce', function($scope, $sce) {	
+	
+	 $scope.videoUrls = {
+	 	left: $sce.trustAsResourceUrl('https://www.youtube.com/embed/xpawuHBoc0E'),
+	 	midle: $sce.trustAsResourceUrl('https://www.youtube.com/embed/kJA1W7eTb1s'),
+	 	right: $sce.trustAsResourceUrl('https://www.youtube.com/embed/Tp8Ic1QttdM'),
+	 };
+
+
 }]);
 
 myApp.controller('biographyController', ['$scope', function($scope) {
 	$scope.message = "This message comes from the Biography Controller.";
-}]);
-
-myApp.controller('tourController', ['$scope', function($scope) {
-	$scope.message = "This message comes from the Tour Controller.";
 }]);
 
 myApp.controller('discographyController', ['$scope', function($scope) {
