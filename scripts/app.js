@@ -20,7 +20,6 @@ myApp.config(function ($routeProvider) {
 	})
 	.when('/tour', {
 		templateUrl: 'pages/tour.html',
-		controller: 'tourController'
 	})
 	.when('/shop', {
 		templateUrl: 'pages/shop.html',
@@ -47,7 +46,32 @@ myApp.config(function ($routeProvider) {
 	})
 });
 
-myApp.controller('newsController', ['$scope', '$sce', function($scope, $sce) {	
+myApp.controller('newsController', ['$scope', '$sce', function($scope, $sce) {
+
+		var socialMedias = [
+			{ 
+				url: $sce.trustAsResourceUrl('https://www.facebook.com/boozeandgloryofficial'), 
+				icon: './img/social-facebook.png'
+			},	
+			{ 
+				url: $sce.trustAsResourceUrl('https://www.google.co.uk/'), 
+				icon: './img/social-instagram.png'
+			},
+			{ 
+				url: $sce.trustAsResourceUrl('https://www.facebook.com/boozeandgloryofficial'), 
+				icon: './img/social-youtube.png'
+			},
+			{ 
+				url: $sce.trustAsResourceUrl('https://www.facebook.com/boozeandgloryofficial'), 
+				icon: './img/social-spotify.png'
+			},
+			{ 
+				url: $sce.trustAsResourceUrl('https://www.facebook.com/boozeandgloryofficial'), 
+				icon: './img/social-itunes.png'
+			}	
+		];
+
+		$scope.socialMedias = socialMedias;
 	
 	 $scope.videoUrls = {
 	 	left: $sce.trustAsResourceUrl('https://www.youtube.com/embed/xpawuHBoc0E'),

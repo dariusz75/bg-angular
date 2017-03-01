@@ -1,12 +1,11 @@
-<p>{{message}}</p>
 <div class="row">
 	<div class="col-sm-8 news-page-left-section">
 		<div class="row news-row">
-		<h1 class="news-title">Japan Tour Dates Announced!</h1>
+			<h1 class="news-title">Japan Tour Dates Announced!</h1>
 			<div class="col-sm-6">
-				<img class="info-img img-responsive" src="img/japan-tour.jpeg">
+				<img class="info-img img-responsive" src="img/japan-tour.jpeg" />
 			</div>
-			<divc class="col-sm-6 news-text"> 
+			<div class="col-sm-6 news-text"> 
 				<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -16,13 +15,14 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
 				</p>
 				<div class="fb-share-button" data-href="http://100dpi.co.uk/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F100dpi.co.uk%2F&amp;src=sdkpreparse">Share</a></div>
+			</div>
 		</div>
 		<div class="row news-row">
 		<h1 class="news-title">Part 1 of the US Tour Announced!</h1>
 			<div class="col-sm-6">
 				<img class="info-img img-responsive" src="img/us-tour.jpeg">
 			</div>
-			<divc class="col-sm-6 news-text"> 
+			<div class="col-sm-6 news-text"> 
 				<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -32,13 +32,14 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
 				</p>
 				<div class="fb-share-button" data-href="http://100dpi.co.uk/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F100dpi.co.uk%2F&amp;src=sdkpreparse">Share</a></div>
+			</div>
 		</div>
 		<div class="row news-row">
 		<h1 class="news-title">European Tour Dates Announced!</h1>
 			<div class="col-sm-6">
 				<img class="info-img img-responsive" src="img/europe-tour.jpeg">
 			</div>
-			<divc class="col-sm-6 news-text"> 
+			<div class="col-sm-6 news-text"> 
 				<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -48,16 +49,13 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
 				</p>
 				<div class="fb-share-button" data-href="http://100dpi.co.uk/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F100dpi.co.uk%2F&amp;src=sdkpreparse">Share</a></div>
+			</div>
 		</div>
 	</div>
 	<divc class="col-sm-4 news-page-right-section">
 		<div class="follow-us">
 			<ul>
-				<li><a href=""><img class="img-responsive" src="img/social-facebook.png"></a></li>
-				<li><a href=""><img class="img-responsive" src="img/social-facebook.png"></a></li>
-				<li><a href=""><img class="img-responsive" src="img/social-facebook.png"></a></li>
-				<li><a href=""><img class="img-responsive" src="img/social-facebook.png"></a></li>
-				<li><a href=""><img class="img-responsive" src="img/social-facebook.png"></a></li>
+				<li ng-repeat="socialMedia in socialMedias"><a ng-href="{{socialMedia.url}}" target="_blank"><img class="img-responsive" src="{{socialMedia.icon}}"></a></li>
 			</ul>
 		</div>
 		<script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
