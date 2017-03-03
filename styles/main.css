@@ -74,3 +74,8 @@ body {
  	padding: 20px 20%;
  	font-weight: 300;
  }
+
+ /* tour page */
+ .bit-widget .bit-event {
+ 	border-top: 1px solid #fff !important;
+ }

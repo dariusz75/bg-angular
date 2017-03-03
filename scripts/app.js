@@ -72,18 +72,43 @@ myApp.controller('newsController', ['$scope', '$sce', function($scope, $sce) {
 		];
 
 		$scope.socialMedias = socialMedias;
-	
-	 $scope.videoUrls = {
-	 	left: $sce.trustAsResourceUrl('https://www.youtube.com/embed/xpawuHBoc0E'),
-	 	midle: $sce.trustAsResourceUrl('https://www.youtube.com/embed/kJA1W7eTb1s'),
-	 	right: $sce.trustAsResourceUrl('https://www.youtube.com/embed/Tp8Ic1QttdM'),
-	 };
 
+		var officialVideos = [
+			{
+				title: 'For The Better Times',
+				url: $sce.trustAsResourceUrl('https://www.youtube.com/embed/Tp8Ic1QttdM')
+			},
+			{
+				title: 'Blood From A Stone',
+				url: $sce.trustAsResourceUrl('https://www.youtube.com/embed/xpawuHBoc0E')
+			},
+			{
+				title: 'Carry On',
+				url: $sce.trustAsResourceUrl('https://www.youtube.com/embed/kJA1W7eTb1s')
+			},
+			{
+				title: 'Leave The Kids Alone',
+				url:  $sce.trustAsResourceUrl('https://www.youtube.com/watch?v=uxEcQJU1AE0')
+			},
+			{
+				title: 'Only Fools Get Caught',
+				url: $sce.trustAsResourceUrl('https://www.youtube.com/watch?v=6HtoYVkbQks')
+			},
+			{
+				title: 'London Skinhead Crew',
+				url: $sce.trustAsResourceUrl('https://www.youtube.com/watch?v=aY4pZlP6YtE')
+			}
+		];  
+
+		$scope.officialVideos = officialVideos;
+	
 
 }]);
 
 myApp.controller('biographyController', ['$scope', function($scope) {
-	$scope.message = "This message comes from the Biography Controller.";
+	$scope.officialVideos = "This message comes from the Biography Controller.";
+
+
 }]);
 
 myApp.controller('discographyController', ['$scope', function($scope) {
