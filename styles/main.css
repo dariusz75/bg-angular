@@ -75,7 +75,27 @@ body {
  	font-weight: 300;
  }
 
+
+ .biography-text ul li {
+ 	list-style: square;
+ 
+ }
+
+ .biography-text ul li a {
+ 	text-decoration: none;
+ 	color: #c39b2c;
+ }
+
+ ul.discography li,
+ ul.discography li a {
+ 	color: #fff;
+ }
+
  /* tour page */
  .bit-widget .bit-event {
  	border-top: 1px solid #fff !important;
  }
+
+
+ footer {
+ 	background-color: #232528;

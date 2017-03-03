@@ -12,11 +12,11 @@ myApp.config(function ($routeProvider) {
 
 	.when('/', {
 		templateUrl: 'pages/news.html',
-		controller: 'newsController'
+		controller: 'mainController'
 	})
 	.when('/biography', {
 		templateUrl: 'pages/biography.html',
-		controller: 'biographyController'
+		controller: 'mainController'
 	})
 	.when('/tour', {
 		templateUrl: 'pages/tour.html',
@@ -46,7 +46,11 @@ myApp.config(function ($routeProvider) {
 	})
 });
 
-myApp.controller('newsController', ['$scope', '$sce', function($scope, $sce) {
+
+
+
+
+myApp.controller('mainController', ['$scope', '$sce', function($scope, $sce) {
 
 		var socialMedias = [
 			{ 
@@ -71,7 +75,6 @@ myApp.controller('newsController', ['$scope', '$sce', function($scope, $sce) {
 			}	
 		];
 
-		$scope.socialMedias = socialMedias;
 
 		var officialVideos = [
 			{
@@ -98,9 +101,142 @@ myApp.controller('newsController', ['$scope', '$sce', function($scope, $sce) {
 				title: 'London Skinhead Crew',
 				url: $sce.trustAsResourceUrl('https://www.youtube.com/watch?v=aY4pZlP6YtE')
 			}
-		];  
+		]; 
 
+		var discography = [
+			{
+				title: 'Always On The Wrong Side',
+				description: 'CD (full album) - Step 1 Music'
+			},
+			{
+				title: 'Always On The Wrong Side',
+				description: 'LP (full album) - Step 1 Music'
+			},
+			{
+				title: 'Punks, Skins Rude Boys Now',
+				description: 'CD (compilation) - Jimmy Jazz Records'
+			},
+			{
+				title: 'England Will Never Change',
+				description: 'EP (split with The Warriors) - Randale Records'
+			},
+			{
+				title: 'Swinging Fuckin Hammers',
+				description: 'EP (split with Harrington Saints) - Pirates Press records'
+			},
+			{
+				title: 'Bruised Knuckles VS  Savage Amusement',
+				description: 'CD (compilation)'
+			},
+			{
+				title: 'Oi! The Print',
+				description: 'CD (compilation) - Oi! The Print Magazine'
+			},
+			{
+				title: '30 Years of Oi',
+				description: 'CD (Garry Bushell’s compilation) - Contra Records'
+			},
+			{
+				title: '30 Years of Oi',
+				description: 'LP (Garry Bushell’s compilation) - Contra Records'
+			},
+			{
+				title: 'Oi! This Is Streetpunk vol.1',
+				description: 'LP (compilation) - Pirates Press Records'
+			},
+			{
+				title: 'Oi! This Is Streetpunk vol.2',
+				description: 'LP (compilation) - Pirates Press Records'
+			},
+			{
+				title: 'On The Booze',
+				description: 'EP (split with On The Job) - Contra Records'
+			},
+			{
+				title: 'Oi! The Superheroes',
+				description: 'EP (split with Gimp Fist, Agent Bulldogg, Sandals) - Bad Look Records'
+			},
+			{
+				title: 'Red, White & Blue',
+				description: 'EP (split with Old Firm Casuals, Argy Bargy, Harrington Saints) - PiratesPress'
+			},
+			{
+				title: "Oi! Ain't Dead",
+				description: 'CD (split with Old Firm Casuals, Razorblade, The Corps) - Rebellion Records'
+			},
+			{
+				title: "Oi! Ain't Dead",
+				description: 'LP (split with Old Firm Casuals, Razorblade, The Corps) - Rebellion Records'
+			},
+			{
+				title: 'Sun Of A Bastard',
+				description: 'CD (compilation) - Sunny Bastards Records'
+			},
+			{
+				title: 'Back Where We Belong',
+				description: 'EP (feat Micky Fitz) - Step 1 Music / Longshot Music'
+			},
+			{
+				title: 'London Skinhead Crew',
+				description: 'CD (singles collection) - Step 1 Music'
+			},
+			{
+				title: 'As Bold As Brass',
+				description: 'CD Europe - Step 1 Music'
+			},
+			{
+				title: 'As Bold As Brass',
+				description: 'LP Europe - Contra Records'
+			},
+			{
+				title: 'As Bold As Brass',
+				description: 'CD USA - Sailor’s Grave Records'
+			},
+			{
+				title: 'As Bold As Brass',
+				description: 'LP USA - Sailor’s Grave Records'
+			},
+			{
+				title: 'As Bold As Brass',
+				description: 'CD Poland - special edition - Lou&Rocked Boys'
+			},
+			{
+				title: 'London Skinhead Crew',
+				description: 'LP (singles collection) - Contra Records'
+			},
+			{
+				title: 'Carry On/Blood From a Stone',
+				description: 'EP Europe - Contra Records'
+			},
+			{
+				title: 'Carry On/Blood From a Stone',
+				description: 'EP USA - iratess Press'
+			},
+		];
+
+	var members = [
+		{
+			name: 'Bart',
+			instrument: 'bass',
+			years: '2009-2012'
+		},
+		{
+			name: 'Mariola',
+			instrument: 'drums',
+			years: '2009-2012'
+		},
+		{
+			name: 'Tommy',
+			instrument: 'drums',
+			years: '2012-2015'
+		}
+	]; 
+
+
+		$scope.socialMedias = socialMedias;
 		$scope.officialVideos = officialVideos;
+		$scope.discography = discography;
+		$scope.members = members;
 	
 
 }]);
