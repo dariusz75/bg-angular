@@ -96,6 +96,15 @@ body {
  	border-top: 1px solid #fff !important;
  }
 
+ .contact-page {
+ 	text-align: center;
+ 	font-family: 'Special Elite', cursive; 
+ }
+
+.contact-page h2 {
+	margin: 40px 0 10px 0;
+}
+
 
  footer {
  	background-color: #232528;

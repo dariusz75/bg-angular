@@ -241,11 +241,7 @@ myApp.controller('mainController', ['$scope', '$sce', function($scope, $sce) {
 
 }]);
 
-myApp.controller('biographyController', ['$scope', function($scope) {
-	$scope.officialVideos = "This message comes from the Biography Controller.";
 
-
-}]);
 
 myApp.controller('discographyController', ['$scope', function($scope) {
 	$scope.message = "This message comes from the Discography Controller.";
@@ -264,7 +260,7 @@ myApp.controller('fansController', ['$scope', function($scope) {
 }]);
 
 myApp.controller('contactController', ['$scope', function($scope) {
-	$scope.message = "Message from Contact controller";
+	
 }]);
 
 
